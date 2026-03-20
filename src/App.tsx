@@ -11,6 +11,15 @@ const App: React.FC = () => {
   const opacityHero = useTransform(scrollY, [0, 300], [1, 0]);
 
   const proyectos: Proyecto[] = [
+
+    {
+      titulo: "Prompt Hub",
+      desc: "API REST for an e-commerce application with Spring Boot, JWT authentication, and MySQL database.",
+      tech: ["Java", "Spring Boot", "PostgreSQL", "React", "TypeScript", "JWT"],
+      linkGithub: "https://github.com/Tomirios2005/PromptHub",
+      linkDeployment: "hhttps://prompt-hub-ecru.vercel.app/",
+      icono: <Cpu size={24} />
+    },
     {
       titulo: "Bank app",
       desc: "Small React application with accounts and money with functional transfers and a node.js/express backend.",
@@ -91,6 +100,7 @@ const App: React.FC = () => {
       </section>
 
       {/* FOOTER */}
+              
       <footer className="py-20 text-center border-t border-slate-900">
         <div className="flex justify-center gap-6">
           <a href="mailto:tomirios2005@gmail.com" className="p-4 bg-slate-900 rounded-full hover:text-purple-500 transition-all border border-slate-800"><Mail size={24} /></a>
