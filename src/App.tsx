@@ -17,7 +17,7 @@ const App: React.FC = () => {
       desc: "API REST for an e-commerce application with Spring Boot, JWT authentication, and MySQL database.",
       tech: ["Java", "Spring Boot", "PostgreSQL", "React", "TypeScript", "JWT"],
       linkGithub: "https://github.com/Tomirios2005/PromptHub",
-      linkDeployment: "hhttps://prompt-hub-ecru.vercel.app/",
+      linkDeployment: "https://prompt-hub-ecru.vercel.app/",
       icono: <Cpu size={24} />
     },
     {
