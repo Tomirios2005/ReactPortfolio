@@ -20,6 +20,15 @@ const App: React.FC = () => {
 
   const proyectos: Proyecto[] = [
     {
+      titulo: "E-commerce API",
+      desc: "React frontend + SupaBase backend for a simple e-commerce demo. Implements product listing, cart, checkout with MercadoPago integration and admin dashboard.",
+      tech: ["Java", "Spring Boot", "PostgreSQL", "JWT"],
+      linkGithub: "https://github.com/Tomirios2005/eCommerceMP",
+      linkDeployment: "https://e-commerce-eight-drab-11.vercel.app/",
+      icono: <Database size={24} />,
+
+    },
+    {
       titulo: "Prompt Hub",
       desc: "REST API for e-commerce with Spring Boot, JWT auth, and PostgreSQL. Includes docs and collection.",
       tech: ["Java", "Spring Boot", "PostgreSQL", "React", "TypeScript", "JWT"],
