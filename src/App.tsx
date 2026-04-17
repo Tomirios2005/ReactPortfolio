@@ -371,11 +371,11 @@ const App: React.FC = () => {
               each month.
             </p>
           </motion.div>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 gap-3">
             {skills.map(({ label, icon }) => (
               <div
                 key={label}
-                className="flex flex-col items-center gap-2.5 p-5 bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-xl text-center text-sm font-medium transition-colors cursor-default"
+                className="flex flex-col items-center gap-2.5 p-1 bg-slate-900 border border-slate-800 hover:border-slate-600 rounded-xl text-center text-sm font-medium transition-colors cursor-default"
               >
                 {icon}
                 <span>{label}</span>
