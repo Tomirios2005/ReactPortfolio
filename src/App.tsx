@@ -329,14 +329,14 @@ const App: React.FC = () => {
             >
               Contact Me
             </a>
-            <a
+            {/* <a
               href="/CV.pdf"
               className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 transition-all font-semibold border border-slate-700"
               target="_blank"
               rel="noreferrer"
             >
               Download CV
-            </a>
+            </a> */}
           </div>
         </motion.div>
         <div className="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:20px_20px]"></div>
