@@ -22,7 +22,7 @@ const App: React.FC = () => {
     {
       titulo: "E-commerce API",
       desc: "React frontend + SupaBase backend for a simple e-commerce demo. Implements product listing, cart, checkout with MercadoPago integration and admin dashboard.",
-      tech: ["Java", "Spring Boot", "PostgreSQL", "JWT"],
+      tech: ["React", "Java", "Node.JS","Supabase" , "PostgreSQL", "JWT"],
       linkGithub: "https://github.com/Tomirios2005/eCommerceMP",
       linkDeployment: "https://e-commerce-eight-drab-11.vercel.app/",
       icono: <Database size={24} />,
