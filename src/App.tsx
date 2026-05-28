@@ -66,7 +66,7 @@ const App: React.FC = () => {
       tech: ["Angular", "TypeScript", "OpenWeather API"],
       linkGithub: "https://github.com/Tomirios2005/climaAngular",
       linkDeployment:
-        "https://angularclima-hix5bv9h5-tomirios2005s-projects.vercel.app/",
+        "https://angularclima.vercel.app/",
       icono: <Code2 size={24} />,
     },
   ];
