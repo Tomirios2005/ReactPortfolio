@@ -12,6 +12,7 @@ import {
 import Header from "./components/header/Header";
 import ProyectoCard from "./components/card/Card";
 import type { Proyecto } from "./types/Index";
+import Chat from "./components/llm/Chat";
 
 const App: React.FC = () => {
   const { scrollY } = useScroll();
@@ -299,6 +300,7 @@ const App: React.FC = () => {
   ];
 
   return (
+    
     <div className="bg-slate-950 text-white min-h-screen selection:bg-purple-500/30 overflow-x-hidden">
       <Header />
 
@@ -350,6 +352,7 @@ const App: React.FC = () => {
         </motion.div>
         <div className="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:20px_20px]"></div>
       </section>
+      <Chat />
 
       {/* ABOUT ME */}
       <section id="about" className="py-16 max-w-6xl mx-auto px-6">
