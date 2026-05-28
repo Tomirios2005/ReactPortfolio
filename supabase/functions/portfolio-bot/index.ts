@@ -1,4 +1,5 @@
 import { Arrow } from "https://deno.land/x/oak@v12.6.1/mod.ts"; // Para manejar CORS si es necesario, o usamos el estándar nativo:
+import { SYSTEM_PROMPT } from "./systemPrompt.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -34,7 +35,7 @@ Deno.serve(async (req) => {
       },
       body: JSON.stringify({
         model: 'openai/gpt-oss-20b', // O el modelo de Groq que prefieras usar
-        messages: messages, // Acá ya pasás el array con el SYSTEM_PROMPT y el historial
+        messages: [{ role: "system", content: SYSTEM_PROMPT }, ...messages],
         temperature: 0.5,
       }),
     });

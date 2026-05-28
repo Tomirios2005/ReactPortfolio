@@ -1,6 +1,5 @@
 import React from "react";
 import ReactMarkdown from 'react-markdown';
-import { SYSTEM_PROMPT } from "../../lib/systemPrompt";
 
 const Chat = () => {
     const [response, setResponse] = React.useState<string>("");
@@ -25,7 +24,6 @@ const Chat = () => {
                 },
                 body: JSON.stringify({
                     messages: [
-                        {role: "system", content: SYSTEM_PROMPT },
                         { role: "user", content: prompt }
                     ]
                 }),
