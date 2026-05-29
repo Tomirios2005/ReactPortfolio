@@ -25,11 +25,11 @@ const Header: React.FC = () => {
 
   return (
     <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 scroll-smooth ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300  ${
         isScrolled ? 'bg-slate-900/80 backdrop-blur-md py-3 shadow-lg' : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center  ">
         {/* Logo / Nombre */}
         <div className="text-xl font-bold text-white tracking-tighter">
           TOMAS<span className="text-purple-500">RIOS</span>
