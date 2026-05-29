@@ -21,7 +21,7 @@ const App: React.FC = () => {
 
   const proyectos: Proyecto[] = [
     {
-      titulo: "E-commerce API",
+      titulo: "E-commerce",
       desc: "React frontend + SupaBase backend for a simple e-commerce demo. Implements product listing, cart, checkout with MercadoPago integration and admin dashboard.",
       tech: ["React", "Java", "Node.JS","Supabase" , "PostgreSQL", "JWT"],
       linkGithub: "https://github.com/Tomirios2005/eCommerceMP",
