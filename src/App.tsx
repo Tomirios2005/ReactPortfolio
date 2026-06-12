@@ -20,15 +20,16 @@ const App: React.FC = () => {
   const opacityHero = useTransform(scrollY, [0, 300], [1, 0]);
 
   const proyectos: Proyecto[] = [
-    {
-      titulo: "E-commerce",
-      desc: "React frontend + SupaBase backend for a simple e-commerce demo. Implements product listing, cart, checkout with MercadoPago integration and admin dashboard.",
-      tech: ["React", "Java", "Node.JS","Supabase" , "PostgreSQL", "JWT"],
-      linkGithub: "https://github.com/Tomirios2005/eCommerceMP",
-      linkDeployment: "https://e-commerce-eight-drab-11.vercel.app/",
-      icono: <Database size={24} />,
+    
+  {
+    titulo: "E-commerce",
+    desc: "React frontend + Supabase or Node.js/Express backend (configurable) for a simple e-commerce demo. Implements product listing, cart, checkout with MercadoPago integration and admin dashboard.",
+    tech: ["React","TypeScript", "Node.js", "Express", "Supabase", "PostgreSQL", "JWT", "MercadoPago API"],
+    linkGithub: "https://github.com/Tomirios2005/eCommerceMP",
+    linkDeployment: "https://e-commerce-eight-drab-11.vercel.app/",
+    icono: <Database size={24} />,
+  },
 
-    },
     {
       titulo: "Prompt Hub",
       desc: "REST API for e-commerce with Spring Boot, JWT auth, and PostgreSQL. Includes docs and collection.",
@@ -47,7 +48,7 @@ const App: React.FC = () => {
     {
       titulo: "GameHub",
       desc: "React app for videogame fans with API data and mini-games.",
-      tech: ["React", "Parallax", "Figma", "Canvas"],
+      tech: ["React", "Parallax", "Figma", "Canvas", "JavaScript"],
       linkGithub:
         "https://github.com/Tomirios2005/TP2-interfaces-react/tree/main",
       linkDeployment: "https://fdezcarlomagno.github.io/TP2-interfaces-react/",
