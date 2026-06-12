@@ -20,20 +20,20 @@ const App: React.FC = () => {
   const opacityHero = useTransform(scrollY, [0, 300], [1, 0]);
 
   const proyectos: Proyecto[] = [
-    
-  {
-    titulo: "E-commerce",
-    desc: "React frontend + Supabase or Node.js/Express backend (configurable) for a simple e-commerce demo. Implements product listing, cart, checkout with MercadoPago integration and admin dashboard.",
-    tech: ["React","TypeScript", "Node.js", "Express", "Supabase", "PostgreSQL", "JWT", "MercadoPago API"],
-    linkGithub: "https://github.com/Tomirios2005/eCommerceMP",
-    linkDeployment: "https://e-commerce-eight-drab-11.vercel.app/",
-    icono: <Database size={24} />,
-  },
+
+    {
+      titulo: "E-commerce",
+      desc: "React frontend + Supabase or Node.js/Express backend (configurable) for a simple e-commerce demo. Implements product listing, cart, checkout with MercadoPago integration and admin dashboard.",
+      tech: ["React", "TypeScript", "Node.js", "Express", "Supabase", "PostgreSQL", "JWT", "MercadoPago API"],
+      linkGithub: "https://github.com/Tomirios2005/eCommerceMP",
+      linkDeployment: "https://e-commerce-eight-drab-11.vercel.app/",
+      icono: <Database size={24} />,
+    },
 
     {
       titulo: "Prompt Hub",
-      desc: "React frontend + Java/Spring Boot backend for a prompt management system. Users can create prompts and send them simultaneously to 6 LLM. Backend integrates with Groq API for AI responses.",
-      tech: ["Java", "Spring Boot", "PostgreSQL", "React", "TypeScript", "JWT"],
+      desc: "React frontend + Java/Spring Boot backend for a prompt management system. Users can create prompts and send them simultaneously to 6 LLMs. Backend integrates with Groq API for fast AI responses.",
+      tech: ["React", "TypeScript", "Java", "Spring Boot", "PostgreSQL", "JWT"],
       linkGithub: "https://github.com/Tomirios2005/PromptHub",
       linkDeployment: "https://prompt-hub-ecru.vercel.app/",
       icono: <Monitor size={24} />,
@@ -45,14 +45,15 @@ const App: React.FC = () => {
       linkGithub: "https://github.com/tomirios2005/banco",
       icono: <Shield size={24} />,
     },
-  {
-    titulo: "Prompt Hub",
-    desc: "React frontend + Java/Spring Boot backend for a prompt management system. Users can create prompts and send them simultaneously to 6 LLMs. Backend integrates with Groq API for fast AI responses.",
-    tech: ["React", "TypeScript", "Java", "Spring Boot", "PostgreSQL", "JWT"],
-    linkGithub: "https://github.com/Tomirios2005/PromptHub",
-    linkDeployment: "https://prompt-hub-ecru.vercel.app/",
-    icono: <Cloud size={24} />,
-  },
+    {
+      titulo: "GameHub",
+      desc: "React app for videogame fans with API data and mini-games.",
+      tech: ["React", "Parallax", "Figma", "Canvas"],
+      linkGithub:
+        "https://github.com/Tomirios2005/TP2-interfaces-react/tree/main",
+      linkDeployment: "https://fdezcarlomagno.github.io/TP2-interfaces-react/",
+      icono: <Cloud size={24} />,
+    },
     {
       titulo: "Scooter Rental System",
       desc: "Backend API only (no frontend deployed). Spring Boot microservice with MySQL/MongoDB.",
@@ -300,7 +301,7 @@ const App: React.FC = () => {
   ];
 
   return (
-    
+
     <div className="bg-slate-950 text-white min-h-screen selection:bg-purple-500/30 overflow-x-hidden">
       <Header />
 
@@ -319,9 +320,14 @@ const App: React.FC = () => {
               RÍOS
             </span>
           </h1>
+          <p className="text-base md:text-lg text-purple-300 font-medium mb-3 max-w-2xl mx-auto">
+            Full Stack Developer | React (TypeScript) • Node.js • Java
+
+          </p>
           <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-light mb-8">
-            Full-stack developer focused on Java/Spring + React ecosystems.
-            Building clean, scalable APIs and UX-driven interfaces.
+            I build high-performance web applications from end to end. Specializing in component-driven frontends with React and robust, scalable backend APIs using Node.js and Spring Boot.
+
+
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button
@@ -364,7 +370,7 @@ const App: React.FC = () => {
           >
             <h2 className="text-3xl font-bold mb-6">About me</h2>
             <p className="text-slate-400 text-lg leading-relaxed mb-4">
-              I&apos;m a software engineer in training at UNICEN and TUDAI,
+              I&apos;m a software developer in training at UNICEN and TUDAI,
               currently improving AI model pipelines and backend systems. My
               focus is on crafting dependable code, clean architecture, and
               efficient team collaboration.

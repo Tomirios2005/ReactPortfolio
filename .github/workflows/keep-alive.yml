@@ -1,0 +1,18 @@
+name: Mantener Edge Function Activa
+
+on:
+  schedule:
+    # Se ejecuta a las 00:00 cada domingo y miércoles (2 veces por semana)
+    - cron: '0 0 * * 0,3'
+  workflow_dispatch: # Te permite probarlo manualmente desde GitHub
+
+jobs:
+  ping-edge-function:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invocar Edge Function
+        run: |
+          curl -X POST "${{ secrets.SUPABASE_URL }}/functions/v1/portfolio-bot" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
+          -H "Content-Type: application/json" \
+          -d '{"ping": true}'
