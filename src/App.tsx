@@ -51,7 +51,7 @@ const App: React.FC = () => {
     tech: ["React", "TypeScript", "Java", "Spring Boot", "PostgreSQL", "JWT"],
     linkGithub: "https://github.com/Tomirios2005/PromptHub",
     linkDeployment: "https://prompt-hub-ecru.vercel.app/",
-    icono: <Monitor size={24} />,
+    icono: <Cloud size={24} />,
   },
     {
       titulo: "Scooter Rental System",
