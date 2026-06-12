@@ -32,7 +32,7 @@ const App: React.FC = () => {
 
     {
       titulo: "Prompt Hub",
-      desc: "REST API for e-commerce with Spring Boot, JWT auth, and PostgreSQL. Includes docs and collection.",
+      desc: "React frontend + Java/Spring Boot backend for a prompt management system. Users can create prompts and send them simultaneously to 6 LLM. Backend integrates with Groq API for AI responses.",
       tech: ["Java", "Spring Boot", "PostgreSQL", "React", "TypeScript", "JWT"],
       linkGithub: "https://github.com/Tomirios2005/PromptHub",
       linkDeployment: "https://prompt-hub-ecru.vercel.app/",
@@ -45,15 +45,14 @@ const App: React.FC = () => {
       linkGithub: "https://github.com/tomirios2005/banco",
       icono: <Shield size={24} />,
     },
-    {
-      titulo: "GameHub",
-      desc: "React app for videogame fans with API data and mini-games.",
-      tech: ["React", "Parallax", "Figma", "Canvas", "JavaScript"],
-      linkGithub:
-        "https://github.com/Tomirios2005/TP2-interfaces-react/tree/main",
-      linkDeployment: "https://fdezcarlomagno.github.io/TP2-interfaces-react/",
-      icono: <Cloud size={24} />,
-    },
+  {
+    titulo: "Prompt Hub",
+    desc: "React frontend + Java/Spring Boot backend for a prompt management system. Users can create prompts and send them simultaneously to 6 LLMs. Backend integrates with Groq API for fast AI responses.",
+    tech: ["React", "TypeScript", "Java", "Spring Boot", "PostgreSQL", "JWT"],
+    linkGithub: "https://github.com/Tomirios2005/PromptHub",
+    linkDeployment: "https://prompt-hub-ecru.vercel.app/",
+    icono: <Monitor size={24} />,
+  },
     {
       titulo: "Scooter Rental System",
       desc: "Backend API only (no frontend deployed). Spring Boot microservice with MySQL/MongoDB.",
