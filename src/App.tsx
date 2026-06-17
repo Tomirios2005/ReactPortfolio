@@ -39,6 +39,13 @@ const App: React.FC = () => {
       icono: <Monitor size={24} />,
     },
     {
+      titulo: "Fintrac",
+      desc: "React frontend + Node.JS+express backend, postgresql DB and supabase for google OAUTH2 for managing incomes and expenses. With GroqAI chat",
+      tech: ["React", "TypeScript", "Node.JS", "express", "PostgreSQL", "JWT", "supabase"],
+      linkGithub: "https://github.com/Tomirios2005/Gestor-de-gastos",
+      icono: <Monitor size={24} />,
+    },
+    {
       titulo: "Bank App",
       desc: "Full-stack banking demo with accounts and transfers (React + Node.js).",
       tech: ["MySQL", "Express", "React", "TypeScript"],
