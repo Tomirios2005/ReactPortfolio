@@ -8,6 +8,7 @@ import {
   Monitor,
   Shield,
   Cloud,
+  Briefcase,
 } from "lucide-react";
 import Header from "./components/header/Header";
 import ProyectoCard from "./components/card/Card";
@@ -305,6 +306,62 @@ const App: React.FC = () => {
         </svg>
       ),
     },
+    {
+      label: "Docker",
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="6" fill="#2496ED" fillOpacity="0.15" />
+          <path
+            d="M8 18h13c1.8 0 3-1 3-2.4 0-1.5-1.2-2.4-2.6-2.4-.2-1.6-1.6-2.7-3.2-2.7-1.2 0-2.2.6-2.7 1.6-.5-.3-1-.4-1.6-.4-1.5 0-2.7 1-3 2.4H8"
+            stroke="#2496ED"
+            strokeWidth="1.4"
+            strokeLinejoin="round"
+          />
+          <path d="M9 18v2.2c0 .8.8 1.8 2.2 1.8h8.2" stroke="#2496ED" strokeWidth="1.4" strokeLinecap="round" />
+        </svg>
+      ),
+    },
+    {
+      label: "Astro",
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="6" fill="#FF5D01" fillOpacity="0.15" />
+          <path d="M16 7l8 16H8L16 7z" stroke="#FF5D01" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M16 13v6" stroke="#FF5D01" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      ),
+    },
+  ];
+
+  const experiencia = [
+    {
+      rol: "Web Developer",
+      lugar: "Alpha Efficiency",
+      cuando: "Jul 2026 — Present · Remote",
+      detalle:
+        "Engineering role at a Chicago-based digital agency. I build and maintain web products while working remotely from Tandil.",
+    },
+    {
+      rol: "AI Trainer",
+      lugar: "Outlier",
+      cuando: "Feb 2026 — May 2026 · Remote",
+      detalle:
+        "Trained LLMs with prompt-response datasets, reviewed generated code and text for accuracy and safety, and stress-tested behavior with prompt engineering.",
+    },
+    {
+      rol: "AI Reviewer / Evaluator",
+      lugar: "Outlier via Mercor",
+      cuando: "Feb 2026 — Apr 2026 · Remote",
+      detalle:
+        "Scored Spanish LLM outputs for accuracy, coherence, and reasoning. Wrote evaluation rubrics and golden trajectories for RLHF, including health and ecommerce tasks.",
+    },
+    {
+      rol: "Lua Developer",
+      lugar: "Wolves RP / FiveM",
+      cuando: "Nov 2021 — Mar 2022",
+      detalle:
+        "Lua gameplay scripts for a live multiplayer server, plus MySQL schemas and server-side query tuning.",
+    },
   ];
 
   return (
@@ -328,13 +385,10 @@ const App: React.FC = () => {
             </span>
           </h1>
           <p className="text-base md:text-lg text-purple-300 font-medium mb-3 max-w-2xl mx-auto">
-            Full Stack Developer | React (TypeScript) • Node.js • Java
-
+            Full Stack Developer | React · TypeScript · Node.js · Java · Spring Boot
           </p>
           <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-light mb-8">
-            I build high-performance web applications from end to end. Specializing in component-driven frontends with React and robust, scalable backend APIs using Node.js and Spring Boot.
-
-
+            Web developer at Alpha Efficiency, based in Tandil. I ship React and TypeScript interfaces on top of REST APIs, and I have hands-on experience evaluating and training LLMs.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button
@@ -377,23 +431,24 @@ const App: React.FC = () => {
           >
             <h2 className="text-3xl font-bold mb-6">About me</h2>
             <p className="text-slate-400 text-lg leading-relaxed mb-4">
-              I&apos;m a software developer in training at UNICEN and TUDAI,
-              currently improving AI model pipelines and backend systems. My
-              focus is on crafting dependable code, clean architecture, and
-              efficient team collaboration.
+              I&apos;m a full stack developer in Tandil, Argentina. I build
+              applications end to end: REST APIs and relational data
+              (PostgreSQL, MySQL) through to interactive interfaces in React
+              and TypeScript. I work in Agile/Scrum and check quality with
+              JUnit, TestNG, and Postman.
             </p>
             <p className="text-slate-400 text-lg leading-relaxed mb-4">
-              I love building products that solve real problems, and I&apos;m
-              especially passionate about scalable APIs, performance
-              optimization, and user-friendly frontend experiences. I&apos;m
-              looking for roles in backend/infra teams with room for growth into
-              cloud-native microservices.
+              Since July 2026 I&apos;ve been a web developer at Alpha Efficiency,
+              a Chicago-based digital agency, working remotely. Before that I
+              trained and reviewed large language models at Outlier and Mercor:
+              prompt-response datasets, evaluation rubrics, and quality review
+              of model outputs in Spanish.
             </p>
             <p className="text-slate-400 text-lg leading-relaxed">
-              What sets me apart is my combination of strong logical thinking
-              (from academic projects) and practical delivery (production-like
-              deployments). I enjoy mentoring peers and learning new frameworks
-              each month.
+              I&apos;m finishing the Tecnicatura Universitaria en Desarrollo de
+              Aplicaciones Informáticas (TUDAI) at UNICEN — coursework is done,
+              one final left. Native Spanish, English C1 (EF SET 74/100). I
+              also hold a private pilot license (ANAC, 2025).
             </p>
           </motion.div>
           <div className="grid grid-cols-2 gap-3">
@@ -406,6 +461,50 @@ const App: React.FC = () => {
                 <span>{label}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EXPERIENCE */}
+      <section id="experience" className="py-16 bg-slate-900/20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold mb-12 text-center">Experience</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {experiencia.map((job) => (
+              <div
+                key={job.rol + job.lugar}
+                className="bg-slate-900 border border-slate-800 rounded-2xl p-6"
+              >
+                <div className="flex items-center gap-3 mb-3 text-purple-400">
+                  <Briefcase size={18} />
+                  <span className="text-xs uppercase tracking-widest font-bold">
+                    {job.cuando}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold">{job.rol}</h3>
+                <p className="text-purple-300 mb-3">{job.lugar}</p>
+                <p className="text-slate-400 leading-relaxed">{job.detalle}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 grid md:grid-cols-2 gap-6 text-slate-400">
+            <div className="bg-slate-950 border border-slate-800 rounded-2xl p-6">
+              <h3 className="text-white font-bold mb-3">Education</h3>
+              <p className="text-white">TUDAI — UNICEN, Tandil</p>
+              <p className="text-sm mb-2">2024 — 2026 · coursework complete, one final left</p>
+              <p className="text-sm">
+                University technician degree in software development: OOP in Java, data structures, web development, relational databases, and Agile.
+              </p>
+            </div>
+            <div className="bg-slate-950 border border-slate-800 rounded-2xl p-6">
+              <h3 className="text-white font-bold mb-3">Certifications</h3>
+              <ul className="text-sm space-y-2">
+                <li>Private pilot license — ANAC, Oct 2025</li>
+                <li>Front-end — Argentina Programa, Feb 2023</li>
+                <li>Desarrollo Web 1 &amp; 2 — Aprendé Programando, 2022–2023</li>
+                <li>EF SET English 74/100 — C1, Dec 2022</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -446,7 +545,7 @@ const App: React.FC = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/tomas-rios-abab09217"
+              href="https://www.linkedin.com/in/tomas-rios-abab09217"
               className="bg-slate-900 p-2 rounded-full hover:text-purple-500 transition-all border border-slate-800"
             >
               <Linkedin size={20} />

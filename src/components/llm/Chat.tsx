@@ -57,7 +57,7 @@ const Chat = () => {
                         <p className="text-sm uppercase tracking-[0.3em] text-purple-400/80 mb-2">AI Assistant</p>
                         <h2 className="text-3xl font-bold text-white">Ask me a question</h2>
                         <p className="mt-2 text-slate-400 max-w-2xl">
-                            Use the chat to get quick answers from the API and see how it integrates with the site's design.
+                            Ask about Tomás&apos;s stack, projects, and experience. Built for recruiters, answered from his profile.
                         </p>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ const Chat = () => {
                         value={prompt}
                         disabled={isLoading}
                         onChange={(e) => setPrompt(e.target.value)}
-                        placeholder={isLoading ? "Thinking..." : "Enter your question..."}
+                        placeholder={isLoading ? "Thinking..." : "Stack, projects, availability..."}
                         className="w-full rounded-3xl border border-slate-700 bg-slate-950/70 px-5 py-4 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition disabled:opacity-50"
                     />
                     <button

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Home, User, Folder, Menu, X } from 'lucide-react'; // Instala lucide-react para los iconos
+import { Github, Linkedin, Home, User, Folder, Briefcase, Menu, X } from 'lucide-react'; // Instala lucide-react para los iconos
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,9 +17,10 @@ const Header: React.FC = () => {
   const navLinks = [
     { name: 'Home', href: '#home', icon: <Home size={18} /> },
     { name: 'About', href: '#about', icon: <User size={18} /> },
+    { name: 'Experience', href: '#experience', icon: <Briefcase size={18} /> },
     { name: 'Projects', href: '#proyectos', icon: <Folder size={18} /> },
     { name: 'GitHub', href: 'https://github.com/tomirios2005', icon: <Github size={18} /> },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/tomas-rios-abab09217', icon: <Linkedin size={18} /> },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/tomas-rios-abab09217', icon: <Linkedin size={18} /> },
   ];
  
 
