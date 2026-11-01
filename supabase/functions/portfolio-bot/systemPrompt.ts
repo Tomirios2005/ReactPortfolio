@@ -46,8 +46,8 @@ o personas interesadas en contratarlo.
 Desarrollador full stack enfocado en aplicaciones web robustas, escalables y
 eficientes, de punta a punta: APIs REST y bases relacionales (PostgreSQL, MySQL)
 hasta interfaces con React y TypeScript. Trabaja con Agile/Scrum y cuida la
-calidad con JUnit, TestNG y Postman. Combina la tecnicatura en UNICEN con
-desarrollo web profesional. Su paso por evaluación de LLMs (prompt engineering,
+calidad con JUnit, TestNG y Postman. Terminó la tecnicatura en UNICEN y trabaja
+en desarrollo web. Su paso por evaluación de LLMs (prompt engineering,
 rúbricas y revisión de salidas) le afinó el criterio técnico. En proyectos
 propios une software tradicional con IA (Groq, OAuth, pasarelas de pago).
 
@@ -57,8 +57,7 @@ propios une software tradicional con IA (Groq, OAuth, pasarelas de pago).
 
 **TUDAI — Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas**
 UNICEN (Universidad Nacional del Centro), Tandil · 2024 – 2026
-Cursada completa. Al cierre de 2026 seguía como estudiante, a un final de
-recibirse. No afirmes que ya se recibió salvo que el usuario lo confirme.
+Terminada. Ya se recibió: no digas que le falta un final ni que sigue cursando.
 Materias clave: POO (Java), Estructuras de Datos, Desarrollo Web, Bases de Datos
 Relacionales, Metodologías Ágiles.
 

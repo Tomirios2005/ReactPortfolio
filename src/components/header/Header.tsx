@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Home, User, Folder, Briefcase, Menu, X } from 'lucide-react'; // Instala lucide-react para los iconos
+import { Github, Linkedin, Home, User, Folder, Briefcase, Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Header: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const lang = i18n.resolvedLanguage?.startsWith('es') ? 'es' : 'en';
 
-  // Efecto para cambiar el estilo al scrollear
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -14,14 +16,36 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const setLang = (next: 'en' | 'es') => {
+    void i18n.changeLanguage(next);
+  };
+
   const navLinks = [
-    { name: 'Home', href: '#home', icon: <Home size={18} /> },
-    { name: 'About', href: '#about', icon: <User size={18} /> },
-    { name: 'Experience', href: '#experience', icon: <Briefcase size={18} /> },
-    { name: 'Projects', href: '#proyectos', icon: <Folder size={18} /> },
+    { name: t('nav.home'), href: '#home', icon: <Home size={18} /> },
+    { name: t('nav.about'), href: '#about', icon: <User size={18} /> },
+    { name: t('nav.experience'), href: '#experience', icon: <Briefcase size={18} /> },
+    { name: t('nav.projects'), href: '#proyectos', icon: <Folder size={18} /> },
     { name: 'GitHub', href: 'https://github.com/tomirios2005', icon: <Github size={18} /> },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/tomas-rios-abab09217', icon: <Linkedin size={18} /> },
   ];
+
+  const languageSwitch = (
+    <div className="flex items-center rounded-full border border-slate-700 p-0.5 text-xs font-semibold">
+      {(['en', 'es'] as const).map((code) => (
+          <button
+            key={code}
+            type="button"
+            onClick={() => setLang(code)}
+            className={`min-w-9 min-h-8 px-2.5 rounded-full uppercase tracking-wide ${
+              lang === code ? 'bg-purple-500 text-white' : 'text-slate-400 hover:text-white'
+            }`}
+            aria-pressed={lang === code}
+          >
+          {code}
+        </button>
+      ))}
+    </div>
+  );
  
 
   return (
@@ -37,7 +61,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-5">
           {navLinks.map((link) => {
             const isExternal = link.href.startsWith('http');
             return (
@@ -53,22 +77,23 @@ const Header: React.FC = () => {
               </a>
             );
           })}
-      
-
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-white"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X /> : <Menu />}
-        </button>
+        <div className="flex items-center gap-3">
+          {languageSwitch}
+          <button
+            className="lg:hidden text-white"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          >
+            {isMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav Dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden bg-slate-900 border-t border-slate-800 animate-in slide-in-from-top duration-300">
+        <div className="lg:hidden bg-slate-900 border-t border-slate-800 animate-in slide-in-from-top duration-300">
           <nav className="flex flex-col p-6 gap-4">
             {navLinks.map((link) => (
               <a
